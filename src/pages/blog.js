@@ -1,9 +1,10 @@
 import React from "react"
 import Layout from "../components/Layout"
+import { graphql } from "gatsby"
 
-const Home = () => (
+const Blog = () => (
   <Layout>
-    <h1>Home</h1>
+    <h1>Blog</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos
       aut consequuntur aspernatur corrupti ratione, odit similique tenetur
@@ -13,4 +14,4 @@ const Home = () => (
   </Layout>
 )
 
-export default Home
+export default Blog
