@@ -1,14 +1,10 @@
 ---
-path: '/errors'
-date: '2020-10-18'
-title: 'Using Errors to Learn How to Code '
-author: 'Jennifer Bain'
-description: 'New to coding? Me too. Let's make peace with errors once and for all.'
+path: "/errors"
+date: "2020-10-18"
+title: "Using Errors to Learn How to Code "
+author: "Jennifer Bain"
+description: "New to coding? Me too. Let's make peace with errors once and for all."
 ---
-
-# Using Errors to Learn How to Code
-
-#### New to coding? Me too. Let's make peace with errors once and for all.
 
 ## **Picture this:**
 
@@ -65,7 +61,7 @@ Twenty minutes of experimentation later, it turns out you simply forgot that "sn
 const favAnimal = "snail"
 ```
 
-![example of js error](./images/error.png)
+![example of js error](../../images/errors/error.png)
 
 Admittedly the above example is simplistic. Nonetheless, that was me the first ~~-50-~~ few times I opened my terminal. To be fair, the above error message is 9 lines long, even though the only thing we truly care about it the type of error and the location of the error, which we can see is in example.js on line 1.
 
@@ -186,7 +182,7 @@ It seems likely we will need to add more to this later but for the moment, our f
 Template is missing: Missing template books/index
 ```
 
-![template is missing error](./images/template_missing.png)
+![template is missing error](../../images/errors/template_missing.png)
 
 ###### _(above is an example of a template error in Rails. That looks like a lot of red text yelling at us, but in reality, it's just a friendly reminder that we are missing an erb file in our views folder that corresponds with our route.)_
 

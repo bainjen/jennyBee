@@ -1,16 +1,64 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
+import Post from "../components/Post"
+// export const AllBlogsQuery = graphql`
+// {
+//   "data": {
+//     "allMarkdownRemark": {
+//       "edges": [
+//         {
+//           "node": {
+//             "frontmatter": {
+//               "date": "2020-11-08",
+//               "title": "My First Blog"
+//             }
+//           }
+//         }
+//       ]
+//     }
+//   },
+//   "extensions": {}
+// }
+// `
 
-const Blog = () => (
+export const AllBlogsQuery = graphql`
+  query AllBlogPosts {
+    allMdx {
+      edges {
+        node {
+          frontmatter {
+            author
+            date
+            description
+            path
+            title
+          }
+        }
+      }
+    }
+  }
+`
+
+const Blog = ({ data }) => (
   <Layout>
     <h1>Blog</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos
-      aut consequuntur aspernatur corrupti ratione, odit similique tenetur
-      accusantium, est nostrum esse minus iure voluptatum nihil cumque
-      blanditiis non? Odit.
-    </p>
+
+    {console.log(data)}
+    {data.allMdx.edges.map(post => {
+      const { title, author, date, description, path } = post.node.frontmatter
+
+      return (
+        <Post
+          title={title}
+          author={author}
+          date={date}
+          description={description}
+          key={`${date}__${title}`}
+          path={path}
+        />
+      )
+    })}
   </Layout>
 )
 
