@@ -3,6 +3,17 @@ import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/Layout"
 import "./blogTemplate.css"
+import styled from "styled-components"
+
+const BlogBodyContainer = styled.div`
+  & p {
+    font-size: 18px;
+  }
+
+  & p img {
+    width: 50%;
+  }
+`
 
 export default function Template({ data }) {
   const post = data.mdx
@@ -17,7 +28,9 @@ export default function Template({ data }) {
         <p className="blogTemplate-posted-by">
           Posted by {author} on {date}
         </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <BlogBodyContainer>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </BlogBodyContainer>
       </div>
     </Layout>
   )

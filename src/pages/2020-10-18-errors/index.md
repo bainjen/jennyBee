@@ -151,7 +151,7 @@ Looks like we're starting a book shop. How thrilling!
 
 We go to the browser and type in the logical path to see a list of books (/books). An error pops up:
 
-```
+```ruby
 Routing Error: No route matches [GET] “/books”
 ```
 
@@ -163,7 +163,7 @@ resources :books, only: [:index]
 
 Full of hope, we refresh the browser again:
 
-```
+```ruby
 Routing Error: uninitialized constant BooksController
 ```
 
@@ -178,7 +178,7 @@ end
 
 It seems likely we will need to add more to this later but for the moment, our focus is on chipping through errors to get this up and running. We reload our app in the browser again:
 
-```
+```ruby
 Template is missing: Missing template books/index
 ```
 
