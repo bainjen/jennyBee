@@ -7,19 +7,19 @@ const About = () => (
     <p>
       Hello! Thank you for stopping by. I'm thrilled you've made it. I'm a web
       developer with a keen eye for detail. I enjoy problem solving and finding
-      ways to make technology more intuitive for users.
+      ways to make technology more intuitive and enjoyable for users.
     </p>
 
     <h1>Coding Languages & Frameworks: </h1>
     <p>JavaScript | HTML | CSS | Node.js | Ruby on Rails | PSQL</p>
 
-    <h1>Intersted in Learning: </h1>
+    <h1>Learning: </h1>
     <p>Python | AWS | TypeScript</p>
 
-    <h1>Guilty Pleasure </h1>
+    <h1>Guilty Programming Pleasure: </h1>
     <p>
-      putzing around in React-Spring and otherwise adding animations to anything
-      and everything
+      Putzing around in React-Spring and otherwise adding animations to anything
+      and everything.
     </p>
 
     <h1>Tidbits:</h1>
@@ -37,9 +37,9 @@ const About = () => (
         getting scared while camping, and browsing bookstores for treasures.
       </li>
       <li>
-        We're currently growing kombucha SCOBYs named Christopher and Nova Scoby
+        We're currently growing kombucha SCOBYs named Christopher and Nova
+        Scoby.
       </li>
-      <li>I'm easily distracted taking pictures of flowers and rocks.</li>
     </ul>
   </Layout>
 )

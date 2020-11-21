@@ -6,18 +6,27 @@ body {
 }
 
 .main {
-  padding: 24px;
+  padding: 1.5em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: #a64ac9;
+  /* background-color: #f9b1f9; */
+  background-color: #f7b8f7;
   height: 100%;
-  color: #ffffff;
+  /* color: #f6e4f6; */
 }
 
 .main h1 {
-  font-size: 5em;
+  font-size: 3em;
+  color: #f872f8;
 }
 
 .main p {
-  font-size: 2em;
+  font-size: 1.5em;
+  color: #fff1ff;
+}
+
+.main li {
+  font-size: 1.5em;
+  margin: 1em;
+  color: #fff1ff;
 }
