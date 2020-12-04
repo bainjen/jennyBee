@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import "./post.css"
+// import "./post.css"
 
 const Post = ({ title, author, date, description, path }) => (
   <div className="post">

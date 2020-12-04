@@ -2,9 +2,9 @@ import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 import CodeBlock from "./CodeBlock"
 import PropTypes from "prop-types"
-import styled from "styled-components"
-import "./layout.css"
-
+import styled, { ThemeProvider } from "styled-components"
+import { lightTheme } from "../themes/theme"
+// import "./layout.css"
 import Nav from "./Nav"
 
 const components = {
@@ -13,12 +13,14 @@ const components = {
 }
 const Layout = ({ children }) => {
   return (
-    <div className="layout">
-      <Nav />
-      <MDXProvider components={components}>
-        <main className="main">{children}</main>
-      </MDXProvider>
-    </div>
+    <ThemeProvider theme={lightTheme}>
+      <div className="layout">
+        <Nav />
+        <MDXProvider components={components}>
+          <main className="main">{children}</main>
+        </MDXProvider>
+      </div>
+    </ThemeProvider>
   )
 }
 
