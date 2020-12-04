@@ -12,6 +12,8 @@ const StyledUl = styled.ul`
   display: flex;
 `
 const StyledLink = styled(Link)`
+  color: ${props => props.theme.mainFont};
+
   &:visited {
     text-decoration: none;
   }

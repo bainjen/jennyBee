@@ -3,8 +3,7 @@ import { MDXProvider } from "@mdx-js/react"
 import CodeBlock from "./CodeBlock"
 import PropTypes from "prop-types"
 import styled, { ThemeProvider } from "styled-components"
-import { lightTheme } from "../themes/theme"
-// import "./layout.css"
+import { lightTheme, GlobalStyle } from "../themes/theme"
 import Nav from "./Nav"
 
 const components = {
@@ -14,6 +13,7 @@ const components = {
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={lightTheme}>
+      <GlobalStyle />
       <div className="layout">
         <Nav />
         <MDXProvider components={components}>
