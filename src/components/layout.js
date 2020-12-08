@@ -10,6 +10,10 @@ const components = {
   pre: props => <div className="CodeBlock" {...props}></div>,
   code: CodeBlock,
 }
+
+const StyledMain = styled.main`
+  padding: ${props => props.theme.mainPadding};
+`
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={lightTheme}>
@@ -17,7 +21,7 @@ const Layout = ({ children }) => {
       <div className="layout">
         <Nav />
         <MDXProvider components={components}>
-          <main className="main">{children}</main>
+          <StyledMain className="main">{children}</StyledMain>
         </MDXProvider>
       </div>
     </ThemeProvider>

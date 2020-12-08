@@ -17,4 +17,5 @@ export const GlobalStyle = createGlobalStyle`
 export const lightTheme = {
   main: "#fff",
   mainFont: "#303030",
+  mainPadding: "1em",
 }

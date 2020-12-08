@@ -6,10 +6,21 @@ import styled from "styled-components"
 
 const StyledNav = styled.nav`
   text-decoration: none;
+  display: flex;
+  padding: ${props => props.theme.mainPadding};
+  justify-content: space-between;
 `
 const StyledUl = styled.ul`
   list-style-type: none;
   display: flex;
+  & li {
+    margin-left: 1em;
+  }
+`
+
+const StyledH1 = styled.h1`
+  font-family: serif;
+  font-size: 2em;
 `
 const StyledLink = styled(Link)`
   color: ${props => props.theme.mainFont};
@@ -32,7 +43,7 @@ const Nav = () => {
   const navLabels = [
     {
       name: "Home",
-      path: "/home",
+      path: "/",
     },
     {
       name: "About",
@@ -62,6 +73,7 @@ const Nav = () => {
 
   return (
     <StyledNav className="nav">
+      <StyledH1>JennyBee</StyledH1>
       <StyledUl className="nav-list">{links}</StyledUl>
     </StyledNav>
   )
