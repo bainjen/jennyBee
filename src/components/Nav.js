@@ -1,14 +1,26 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { device } from "../devices"
 
 // import "./nav.css"
 
 const StyledNav = styled.nav`
   text-decoration: none;
   display: flex;
+  flex-direction: column;
   padding: ${props => props.theme.mainPadding};
+  align-items: center;
   justify-content: space-between;
+  font-size: 15px;
+
+  @media ${device.laptop} {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: ${props => props.theme.extraLeftPad};
+    padding-right: ${props => props.theme.extraRightPad};
+  }
 `
 const StyledUl = styled.ul`
   list-style-type: none;
@@ -22,6 +34,10 @@ const StyledH1 = styled.h1`
   font-family: ${props => props.theme.cursiveFont};
   font-size: 4em;
   color: ${props => props.theme.salmon};
+  margin-bottom: 20px;
+  @media ${device.laptop} {
+    margin-bottom: 0;
+  }
 `
 const StyledLink = styled(Link)`
   color: ${props => props.theme.lilac};
@@ -38,7 +54,7 @@ const StyledLink = styled(Link)`
   }
   &:hover {
     text-decoration: none;
-    color: ${props => props.theme.purple};
+    color: ${props => props.theme.tan};
   }
 `
 

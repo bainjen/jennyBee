@@ -3,10 +3,10 @@ import Layout from "../components/Layout"
 
 const Home = () => (
   <Layout>
-    <h1>Home</h1>
+    <h1>Hello, friend!</h1>
     <p>
-      Hello, friend! Thank you for stopping by. I'm a full stack web-developer
-      with a degree in anthropology. Thank you for stopping by -- enjoy 💖
+      I'm a full stack web-developer with a degree in anthropology. Thank you
+      for stopping by. I'm thrilled you've made it! -- enjoy 💖
     </p>
   </Layout>
 )

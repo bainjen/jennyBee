@@ -9,16 +9,19 @@ export const GlobalStyle = createGlobalStyle`
 
   html, body {
     background: ${props => props.theme.main}; 
-    color: ${props => props.theme.mainFont}; 
+    color: ${props => props.theme.green}; 
     overflow-x: hidden;
-    font-family: ${props => props.theme.mainFont}
+    font-family: ${props => props.theme.mainFont}; 
+    font-size: 16px;
   }
 `
 
 export const lightTheme = {
   main: "#fff",
-  mainFont: "#303030",
+  charcoal: "#303030",
   mainPadding: "1em",
+  extraLeftPad: "3em",
+  extraRightPad: "3em",
   cursiveFont: "'Cookie', cursive",
   mainFont: "'Raleway', sans-serif",
   peach: "#E59852",

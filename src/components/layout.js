@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 import styled, { ThemeProvider } from "styled-components"
 import { Helmet } from "react-helmet"
 import { lightTheme, GlobalStyle } from "../themes/theme"
+import { device } from "./devices"
 import Nav from "./Nav"
 
 const components = {
@@ -14,6 +15,13 @@ const components = {
 
 const StyledMain = styled.main`
   padding: ${props => props.theme.mainPadding};
+  display: flex;
+  flex-direction: column;
+
+  @media ${device.laptop} {
+    padding-left: ${props => props.theme.extraLeftPad};
+    padding-right: ${props => props.theme.extraRightPad};
+  }
 `
 const Layout = ({ children }) => {
   return (
