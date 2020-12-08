@@ -22,6 +22,7 @@ const StyledH1 = styled.h1`
   margin-top: 0.25em;
   margin-bottom: 0.12em;
   font-size: 24px;
+  letter-spacing: 2px;
   @media ${device.laptop} {
     font-size: 28px;
     margin-top: 0.5em;
@@ -32,6 +33,9 @@ const StyledH1 = styled.h1`
 const StyledP = styled.p`
   color: ${props => props.theme.green};
   margin-bottom: 1em;
+  & span {
+    margin-left: 0.25em;
+  }
   @media ${device.laptop} {
   }
 `
@@ -39,10 +43,22 @@ const StyledP = styled.p`
 const About = () => (
   <Layout>
     <StyledH1>About</StyledH1>
+    <StyledP>I'm a web developer with a keen eye for detail.</StyledP>
     <StyledP>
-      I'm a web developer with a keen eye for detail. I enjoy problem solving
-      and finding ways to make technology more intuitive and enjoyable for
-      users. 💫
+      I enjoy problem solving and finding ways to make technology more intuitive
+      and enjoyable for users.
+      <span role="img" aria-label="shooting star">
+        💫
+      </span>
+    </StyledP>
+    <StyledP>
+      Currently, I reside in Calgary, AB
+      <span role="img" aria-label="Canadian Flag">
+        🇨🇦
+      </span>
+      <span role="img" aria-label="mountain">
+        🏔
+      </span>
     </StyledP>
 
     <StyledH1>Languages & Frameworks: </StyledH1>
@@ -60,18 +76,25 @@ const About = () => (
     <StyledH1>Tidbits</StyledH1>
     <StyledUl>
       <li>
-        <span>🥕</span>{" "}
+        <span role="img" aria-label="carrot">
+          🥕
+        </span>
+
         <p>I've never met a kitchen experiment I didn't enjoy.</p>
       </li>
       <li>
-        <span>🐕 </span>
+        <span role="img" aria-label="dog">
+          🐕{" "}
+        </span>
         <p>
           Yes, I'm a dog person. I like cats, too. Followed closely by gibbons
           and snails.
         </p>
       </li>
       <li>
-        <span>👾</span>{" "}
+        <span role="img" aria-label="alien">
+          👾
+        </span>{" "}
         <p>
           I live with my partner, James and two little monsters, Pippa &
           Prairie. We enjoy reality TV, getting scared while camping, and
@@ -79,7 +102,9 @@ const About = () => (
         </p>
       </li>
       <li>
-        <span>🦠</span>
+        <span role="img" aria-label="germ">
+          🦠
+        </span>
         <p>
           We're currently growing kombucha SCOBYs named Christopher and Nova
           Scoby.

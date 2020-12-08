@@ -18,8 +18,10 @@ const StyledNav = styled.nav`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding-left: ${props => props.theme.extraLeftPad};
     padding-right: ${props => props.theme.extraRightPad};
+    font-size: 20px;
   }
 `
 const StyledUl = styled.ul`
@@ -32,7 +34,7 @@ const StyledUl = styled.ul`
 
 const StyledH1 = styled.h1`
   font-family: ${props => props.theme.cursiveFont};
-  font-size: 4em;
+  font-size: 84px;
   color: ${props => props.theme.salmon};
   margin-bottom: 20px;
   @media ${device.laptop} {
