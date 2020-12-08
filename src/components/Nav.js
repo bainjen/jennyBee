@@ -19,8 +19,8 @@ const StyledUl = styled.ul`
 `
 
 const StyledH1 = styled.h1`
-  font-family: serif;
-  font-size: 2em;
+  font-family: ${props => props.theme.cursiveFont};
+  font-size: 4em;
 `
 const StyledLink = styled(Link)`
   color: ${props => props.theme.mainFont};

@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     background: ${props => props.theme.main}; 
     color: ${props => props.theme.mainFont}; 
     overflow-x: hidden;
+    font-family: ${props => props.theme.mainFont}
   }
 `
 
@@ -18,4 +19,6 @@ export const lightTheme = {
   main: "#fff",
   mainFont: "#303030",
   mainPadding: "1em",
+  cursiveFont: "'Cookie', cursive",
+  mainFont: "'Raleway', sans-serif",
 }
