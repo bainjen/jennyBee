@@ -5,29 +5,12 @@ import { device } from "../devices"
 
 const StyledUl = styled.ul`
   list-style-type: none;
-  /* text-align: justify;
-  list-style-position: outside; */
 
   & li {
     margin-bottom: 1em;
     display: flex;
   }
 
-  /* & li:nth-child(4n + 1)::before {
-    content: "🥕 ";
-  }
-
-  & li:nth-child(4n + 2)::before {
-    content: "🐶 ";
-  }
-
-  & li:nth-child(4n + 3)::before {
-    content: "👾 ";
-  }
-
-  & li:nth-child(4n)::before {
-    content: "🦠";
-  } */
   & span {
     margin-right: 1em;
   }
@@ -50,7 +33,6 @@ const StyledP = styled.p`
   color: ${props => props.theme.green};
   margin-bottom: 1em;
   @media ${device.laptop} {
-    /* margin-bottom: 20px; */
   }
 `
 
@@ -63,26 +45,23 @@ const About = () => (
       users. 💫
     </StyledP>
 
-    <StyledH1>Coding Languages & Frameworks: </StyledH1>
+    <StyledH1>Languages & Frameworks: </StyledH1>
     <StyledP>JavaScript | HTML | CSS | Node.js | Ruby on Rails | PSQL</StyledP>
 
-    <StyledH1>Learning: </StyledH1>
+    <StyledH1>Learning </StyledH1>
     <StyledP>Python | AWS | TypeScript</StyledP>
 
-    <StyledH1>Guilty Programming Pleasure: </StyledH1>
+    <StyledH1>Guilty Programming Pleasure </StyledH1>
     <StyledP>
-      Putzing around in React-Spring and otherwise adding animations to anything
-      and everything.
+      Putzing around in React-Spring and adding animations to anything and
+      everything.
     </StyledP>
 
-    <StyledH1>Tidbits:</StyledH1>
+    <StyledH1>Tidbits</StyledH1>
     <StyledUl>
       <li>
         <span>🥕</span>{" "}
-        <p>
-          Trying new recipes and improving on old ones is my jam. I've never met
-          a kitchen experiment I didn't enjoy.
-        </p>
+        <p>I've never met a kitchen experiment I didn't enjoy.</p>
       </li>
       <li>
         <span>🐕 </span>
@@ -94,8 +73,9 @@ const About = () => (
       <li>
         <span>👾</span>{" "}
         <p>
-          My partner, James, is the Scully to my Mulder. We enjoy reality TV,
-          getting scared while camping, and browsing bookstores for treasures.
+          I live with my partner, James and two little monsters, Pippa &
+          Prairie. We enjoy reality TV, getting scared while camping, and
+          browsing bookstores for treasures.
         </p>
       </li>
       <li>
