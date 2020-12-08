@@ -14,6 +14,10 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   font-size: 15px;
 
+  @media ${device.tablet} {
+    font-size: 16px;
+  }
+
   @media ${device.laptop} {
     display: flex;
     flex-direction: row;
