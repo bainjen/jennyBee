@@ -21,12 +21,14 @@ const StyledUl = styled.ul`
 const StyledH1 = styled.h1`
   font-family: ${props => props.theme.cursiveFont};
   font-size: 4em;
+  color: ${props => props.theme.salmon};
 `
 const StyledLink = styled(Link)`
-  color: ${props => props.theme.mainFont};
+  color: ${props => props.theme.lilac};
 
   &:visited {
     text-decoration: none;
+    color: ${props => props.theme.mustard};
   }
   &:link {
     text-decoration: none;
@@ -36,6 +38,7 @@ const StyledLink = styled(Link)`
   }
   &:hover {
     text-decoration: none;
+    color: ${props => props.theme.purple};
   }
 `
 
