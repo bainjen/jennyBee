@@ -5,13 +5,15 @@ import { device } from "../devices"
 
 const StyledUl = styled.ul`
   list-style-type: none;
-  /* text-align: justify; */
-  list-style-position: outside;
+  /* text-align: justify;
+  list-style-position: outside; */
+
   & li {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
+    display: flex;
   }
 
-  & li:nth-child(4n + 1)::before {
+  /* & li:nth-child(4n + 1)::before {
     content: "🥕 ";
   }
 
@@ -25,10 +27,10 @@ const StyledUl = styled.ul`
 
   & li:nth-child(4n)::before {
     content: "🦠";
-  }
-  /* & span {
-    margin-right: 1em;
   } */
+  & span {
+    margin-right: 1em;
+  }
 `
 
 const StyledH1 = styled.h1`
@@ -76,20 +78,32 @@ const About = () => (
     <StyledH1>Tidbits:</StyledH1>
     <StyledUl>
       <li>
-        Trying new recipes and improving on old ones is my jam. I've never met a
-        kitchen experiment I didn't enjoy.
+        <span>🥕</span>{" "}
+        <p>
+          Trying new recipes and improving on old ones is my jam. I've never met
+          a kitchen experiment I didn't enjoy.
+        </p>
       </li>
       <li>
-        Yes, I'm a dog person. I like cats, too. Followed closely by gibbons and
-        snails.
+        <span>🐕 </span>
+        <p>
+          Yes, I'm a dog person. I like cats, too. Followed closely by gibbons
+          and snails.
+        </p>
       </li>
       <li>
-        My partner, James, is the Scully to my Mulder. We enjoy reality TV,
-        getting scared while camping, and browsing bookstores for treasures.
+        <span>👾</span>{" "}
+        <p>
+          My partner, James, is the Scully to my Mulder. We enjoy reality TV,
+          getting scared while camping, and browsing bookstores for treasures.
+        </p>
       </li>
       <li>
-        We're currently growing kombucha SCOBYs named Christopher and Nova
-        Scoby.
+        <span>🦠</span>
+        <p>
+          We're currently growing kombucha SCOBYs named Christopher and Nova
+          Scoby.
+        </p>
       </li>
     </StyledUl>
   </Layout>
