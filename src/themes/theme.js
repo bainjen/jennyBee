@@ -14,14 +14,19 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${props => props.theme.mainFont}; 
     font-size: 16px;
   }
+
+  body {
+    border: 8px solid ${props => props.theme.green};
+    height: 100vh;
+  }
 `
 
 export const lightTheme = {
   main: "#fff",
   charcoal: "#303030",
-  mainPadding: "1em",
-  extraLeftPad: "3em",
-  extraRightPad: "3em",
+  mainPadding: "3vh 6vw",
+  extraLeftPad: "5vw",
+  extraRightPad: "5vw",
   cursiveFont: "'Cookie', cursive",
   mainFont: "'Raleway', sans-serif",
   peach: "#E59852",

@@ -1,16 +1,29 @@
 import React from "react"
+import styled from "styled-components"
+import { device } from "../devices"
 import Layout from "../components/Layout"
+
+const StyledH1 = styled.h1`
+  font-size: 40px;
+  margin-bottom: 0.5em;
+`
+
+const StyledH2 = styled.h2`
+  font-size: 32px;
+`
+const StyledP = styled.p``
 
 const Home = () => (
   <Layout>
-    <h1>Hello, friend!</h1>
-    <p>
-      I'm a full stack web-developer with a degree in anthropology. Thank you
-      for stopping by. I'm thrilled you've made it! -- enjoy
+    <StyledH1>Hello, friend!</StyledH1>
+    <StyledH2>I'm Jennifer,</StyledH2>
+    <StyledH2>a full stack web-developer.</StyledH2>
+    <styledP>
+      Thank you for stopping by. I'm thrilled you've made it! -- enjoy
       <span role="img" aria-label="sparkle heart">
         💖
       </span>
-    </p>
+    </styledP>
   </Layout>
 )
 

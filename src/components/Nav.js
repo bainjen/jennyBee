@@ -98,7 +98,7 @@ const Nav = () => {
 
   return (
     <StyledNav className="nav">
-      <StyledH1>JennyBee</StyledH1>
+      <StyledH1>JennyBain</StyledH1>
       <StyledUl className="nav-list">{links}</StyledUl>
     </StyledNav>
   )
