@@ -34,6 +34,10 @@ const Layout = ({ children }) => {
           href="https://fonts.googleapis.com/css2?family=Cookie&family=Raleway&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
       </Helmet>
       <div className="layout">
         <Nav />

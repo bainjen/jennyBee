@@ -10,12 +10,17 @@ const StyledNav = styled.nav`
   display: flex;
   flex-direction: column;
   padding: ${props => props.theme.mainPadding};
+  padding-left: 0;
   align-items: center;
   justify-content: space-between;
   font-size: 15px;
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
 
   @media ${device.tablet} {
     font-size: 16px;
+    padding-left: 1em;
   }
 
   @media ${device.laptop} {
@@ -43,6 +48,12 @@ const StyledH1 = styled.h1`
   margin-bottom: 20px;
   @media ${device.laptop} {
     margin-bottom: 0;
+  }
+  @media ${device.laptop} {
+    margin-bottom: 0;
+  }
+  @media ${device.desktop} {
+    font-size: 116px;
   }
 `
 const StyledLink = styled(Link)`
