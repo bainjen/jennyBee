@@ -30,6 +30,20 @@ const StyledH1 = styled.h1`
   }
 `
 
+const StyledH2 = styled.h2`
+  color: ${props => props.theme.lilac};
+  /* margin-bottom: 20px; */
+  margin-top: 0.25em;
+  margin-bottom: 0.12em;
+  font-size: 16px;
+  letter-spacing: 2px;
+  @media ${device.laptop} {
+    /* font-size: 16px; */
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+  }
+`
+
 const StyledP = styled.p`
   color: ${props => props.theme.green};
   margin-bottom: 1em;
@@ -39,19 +53,18 @@ const StyledP = styled.p`
   @media ${device.laptop} {
   }
 `
+const pageBreak = "___________________"
 
 const About = () => (
   <Layout>
     <StyledH1>About</StyledH1>
-    <StyledP>I'm a web developer with a keen eye for detail.</StyledP>
     <StyledP>
-      I enjoy problem solving and finding ways to make technology more intuitive
-      and enjoyable for users.
+      I'm a web developer with a keen eye for detail. I enjoy problem solving
+      and finding ways to make technology more intuitive and enjoyable for
+      users.
       <span role="img" aria-label="shooting star">
         💫
       </span>
-    </StyledP>
-    <StyledP>
       Currently, I reside in Calgary, AB
       <span role="img" aria-label="Canadian Flag">
         🇨🇦
@@ -61,19 +74,24 @@ const About = () => (
       </span>
     </StyledP>
 
-    <StyledH1>Languages & Frameworks: </StyledH1>
+    <StyledH2>Languages & Frameworks </StyledH2>
     <StyledP>JavaScript | HTML | CSS | Node.js | Ruby on Rails | PSQL</StyledP>
 
-    <StyledH1>Learning </StyledH1>
-    <StyledP>Python | AWS | TypeScript</StyledP>
+    <StyledP>{pageBreak}</StyledP>
 
-    <StyledH1>Guilty Programming Pleasure </StyledH1>
+    <StyledH2>Learning </StyledH2>
+    <StyledP>Python | AWS | TypeScript</StyledP>
+    <StyledP>{pageBreak}</StyledP>
+
+    <StyledH2>Guilty Programming Pleasure </StyledH2>
     <StyledP>
       Putzing around in React-Spring and adding animations to anything and
       everything.
     </StyledP>
 
-    <StyledH1>Tidbits</StyledH1>
+    <StyledP>{pageBreak}</StyledP>
+
+    <StyledH2>Tidbits</StyledH2>
     <StyledUl>
       <li>
         <span role="img" aria-label="carrot">

@@ -24,6 +24,7 @@ const Home = () => (
         💖
       </span>
     </styledP>
+    {/* <img src="../images/didgood.png" /> */}
   </Layout>
 )
 
