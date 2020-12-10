@@ -17,10 +17,15 @@ const StyledMain = styled.main`
   padding: ${props => props.theme.mainPadding};
   display: flex;
   flex-direction: column;
+  padding-top: 192px;
 
   @media ${device.laptop} {
     padding-left: ${props => props.theme.extraLeftPad};
     padding-right: ${props => props.theme.extraRightPad};
+  }
+
+  @media ${device.desktop} {
+    padding-top: 232px;
   }
 `
 const Layout = ({ children }) => {
