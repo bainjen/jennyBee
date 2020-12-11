@@ -61,7 +61,7 @@ const StyledLink = styled(Link)`
 
   &:visited {
     text-decoration: none;
-    color: ${props => props.theme.mustard};
+    color: ${props => props.theme.shutter};
   }
   &:link {
     text-decoration: none;

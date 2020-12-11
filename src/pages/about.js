@@ -6,6 +6,7 @@ import { device } from "../devices"
 const StyledUl = styled.ul`
   list-style-type: none;
   font-size: 16px;
+  padding-bottom: 1em;
 
   & li {
     margin-bottom: 1em;
@@ -18,9 +19,6 @@ const StyledUl = styled.ul`
 
   @media ${device.laptop} {
     font-size: 24px;
-    /* color: ${props => props.theme.salmon}; */
-    /* text-transform: lowercase;
-    font-weight: lighter; */
   }
 `
 const ContainerDiv = styled.div`
@@ -44,26 +42,18 @@ const AboutImg = styled.div`
   background: url("/static/5dd551b627c9c3d876134ad7fe8c05e0/21d0b/yellowLeaves.jpg")
     right bottom;
   background-size: cover;
-  /* width: 80vw; */
   height: 300px;
 
   @media ${device.laptop} {
     display: none;
-    /* background-size: cover; */
-    /* width: 50%; */
-    /* height: auto; */
-    /* margin: 3.5em; */
   }
 
   &.fork {
-    /* @media ${device.laptop} { */
-
     background: url("/static/390cbe93f601968ef48231b812a0e7c3/21d0b/fork.jpg")
       bottom center;
     display: block;
-    height: 200px;
+    height: 250px;
     background-size: cover;
-    height: 500px;
     border-radius: 15px;
   }
 `
@@ -79,41 +69,48 @@ const Colors = styled.div`
 `
 
 const ColorDiv = styled.div`
-  height: 350px;
-  /* background-color: yellow; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 15px;
-  /* margin-top: 5px; */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
+  &.about {
+    margin-bottom: 3vh;
+    @media ${device.laptop} {
+      margin-bottom: 75px;
+    }
+  }
   &.one {
     background-color: ${props => props.theme.peach};
 
     @media ${device.laptop} {
       width: 30%;
+      height: 350px;
     }
   }
   &.two {
-    background-color: ${props => props.theme.softPink};
+    /* background-color: ${props => props.theme.softPink};
+   */
+    background-color: bisque;
     @media ${device.laptop} {
       width: 30%;
+      height: 350px;
     }
   }
   &.three {
     background-color: ${props => props.theme.shutters};
     @media ${device.laptop} {
       width: 30%;
+      height: 350px;
     }
   }
 `
 
 const StyledH1 = styled.h1`
   color: ${props => props.theme.green};
-  /* margin-bottom: 20px; */
   text-transform: uppercase;
   margin-top: 0.25em;
   margin-bottom: 0.12em;
@@ -133,7 +130,6 @@ const StyledH1 = styled.h1`
 
 const StyledH2 = styled.h2`
   color: ${props => props.theme.green};
-  /* margin-bottom: 20px; */
   text-transform: uppercase;
   margin-top: 0.25em;
   margin-bottom: 0.12em;
@@ -144,6 +140,7 @@ const StyledH2 = styled.h2`
     /* font-size: 16px; */
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    font-size: 24px;
   }
 `
 
@@ -154,7 +151,10 @@ const StyledP = styled.p`
     margin-left: 0.25em;
   }
   @media ${device.laptop} {
-    font-size: 24px;
+    text-align: justify;
+    &.aboutP {
+      font-size: 24px;
+    }
   }
 `
 
@@ -170,9 +170,9 @@ const About = () => (
     <ContainerDiv>
       {/* <AboutImg src="/static/5dd551b627c9c3d876134ad7fe8c05e0/21d0b/yellowLeaves.jpg" /> */}
       <AboutDiv>
-        <ColorDiv>
+        <ColorDiv className="about">
           <StyledH1>About</StyledH1>
-          <StyledP>
+          <StyledP className="aboutP">
             I'm a web developer with a keen eye for detail. I enjoy problem
             solving and finding ways to make web apps more intuitive and
             enjoyable for users. Currently, I reside in Calgary, AB
@@ -183,23 +183,23 @@ const About = () => (
         <Colors>
           <ColorDiv className="one">
             <StyledH2>Languages & Frameworks </StyledH2>
+            <StyledP>{pageBreak}</StyledP>
             <StyledP>
               JavaScript | HTML | CSS | Node.js | Ruby on Rails | PSQL
             </StyledP>
-            <StyledP>{pageBreak}</StyledP>
           </ColorDiv>
           <ColorDiv className="two">
             <StyledH2>Learning </StyledH2>
-            <StyledP>Python | AWS | TypeScript</StyledP>
             <StyledP>{pageBreak}</StyledP>
+            <StyledP>Python | AWS | TypeScript</StyledP>
           </ColorDiv>
           <ColorDiv className="three">
             <StyledH2>Guilty Programming Pleasure </StyledH2>
+            <StyledP>{pageBreak}</StyledP>
             <StyledP>
               Putzing around in React-Spring and adding animations to anything
               and everything.
             </StyledP>
-            <StyledP>{pageBreak}</StyledP>
           </ColorDiv>
         </Colors>
       </AboutDiv>

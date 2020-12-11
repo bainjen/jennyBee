@@ -33,12 +33,6 @@ const ImageDiv = styled.div`
   }
 `
 
-const ColorDiv = styled.div`
-  height: 300px;
-  width: 100vh;
-  background-color: yellow;
-`
-
 const StyledH1 = styled.h1`
   font-size: 20px;
   margin-bottom: 25px;
