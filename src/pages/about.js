@@ -36,7 +36,7 @@ const AboutDiv = styled.div`
   /* padding-right: 3em; */
   margin-top: 3em;
   @media ${device.laptop} {
-    width: 40vw;
+    /* width: 40vw; */
     margin-top: 0;
     margin-right: 8em;
   }
@@ -49,10 +49,23 @@ const AboutImg = styled.div`
   height: 300px;
 
   @media ${device.laptop} {
-    background-size: cover;
-    width: 50%;
-    height: auto;
+    display: none;
+    /* background-size: cover; */
+    /* width: 50%; */
+    /* height: auto; */
     /* margin: 3.5em; */
+  }
+
+  &.fork {
+    /* @media ${device.laptop} { */
+
+    background: url("/static/390cbe93f601968ef48231b812a0e7c3/21d0b/fork.jpg")
+      bottom center;
+    display: block;
+    height: 200px;
+    background-size: cover;
+    height: 500px;
+    /* } */
   }
 `
 
@@ -140,6 +153,7 @@ const About = () => (
         <StyledP>{pageBreak}</StyledP>
       </AboutDiv>
     </ContainerDiv>
+    <AboutImg className="fork"></AboutImg>
     <StyledH1 className="tidbits">Tidbits</StyledH1>
     <StyledUl>
       <li>
@@ -178,6 +192,7 @@ const About = () => (
         </p>
       </li>
     </StyledUl>
+    {/* <AboutImg className="fork"></AboutImg> */}
   </Layout>
 )
 
