@@ -29,7 +29,8 @@ export const lightTheme = {
   extraRightPad: "8vw",
   cursiveFont: "'Cookie', cursive",
   mainFont: "'Raleway', sans-serif",
-  peach: "#E59852",
+  // peach: "#E59852",
+  peach: "#FDC08F",
   salmon: "#F5644E",
   // salmon: "#e36346",
   mustard: "#BC853B",
@@ -38,4 +39,7 @@ export const lightTheme = {
   purple: "#766EC1",
   green: "#223C38",
   shutters: "#cbc1db",
+  lightPink: "#F1C3C5",
+  dustyRose: "#D09290",
+  softPink: "#FED5D6",
 }

@@ -18,7 +18,7 @@ const ImageDiv = styled.div`
   @media ${device.laptopL} {
     /* padding-left: 16vw; */
     /* padding-top: 33vh; */
-    padding-top: 350px;
+    padding-top: 300px;
   }
 
   @media ${device.desktop} {
@@ -31,6 +31,12 @@ const ImageDiv = styled.div`
     /* padding-top: 33vh; */
     padding-top: 500px;
   }
+`
+
+const ColorDiv = styled.div`
+  height: 300px;
+  width: 100vh;
+  background-color: yellow;
 `
 
 const StyledH1 = styled.h1`
@@ -81,19 +87,6 @@ const StyledH1 = styled.h1`
   }
 `
 
-// const StyledH2 = styled.h2`
-//   font-size: 48px;
-//   color: white;
-//   font-weight: 900;
-//   letter-spacing: 2px;
-//   background: ${props => props.theme.salmon};
-//   padding-left: 10px;
-//   padding-top: 14px;
-//   padding-bottom: 14px;
-//   padding-right: 100px;
-//   width: fit-content;
-//   margin-bottom: 25px;
-// `
 const StyledP = styled.p`
   color: white;
   font-size: 16px;

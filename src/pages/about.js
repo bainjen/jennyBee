@@ -33,12 +33,11 @@ const ContainerDiv = styled.div`
   }
 `
 const AboutDiv = styled.div`
-  /* padding-right: 3em; */
+  display: flex;
+  flex-direction: column;
   margin-top: 3em;
   @media ${device.laptop} {
-    /* width: 40vw; */
     margin-top: 0;
-    margin-right: 8em;
   }
 `
 const AboutImg = styled.div`
@@ -65,7 +64,50 @@ const AboutImg = styled.div`
     height: 200px;
     background-size: cover;
     height: 500px;
-    /* } */
+    border-radius: 15px;
+  }
+`
+
+const Colors = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  @media ${device.laptop} {
+    flex-direction: row;
+  }
+`
+
+const ColorDiv = styled.div`
+  height: 350px;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+  /* margin-top: 5px; */
+  margin-bottom: 10px;
+
+  &.one {
+    background-color: ${props => props.theme.peach};
+
+    @media ${device.laptop} {
+      width: 30%;
+    }
+  }
+  &.two {
+    background-color: ${props => props.theme.softPink};
+    @media ${device.laptop} {
+      width: 30%;
+    }
+  }
+  &.three {
+    background-color: ${props => props.theme.shutters};
+    @media ${device.laptop} {
+      width: 30%;
+    }
   }
 `
 
@@ -90,7 +132,7 @@ const StyledH1 = styled.h1`
 `
 
 const StyledH2 = styled.h2`
-  color: ${props => props.theme.lilac};
+  color: ${props => props.theme.green};
   /* margin-bottom: 20px; */
   text-transform: uppercase;
   margin-top: 0.25em;
@@ -126,34 +168,42 @@ const pageBreak = <LineDiv />
 const About = () => (
   <Layout>
     <ContainerDiv>
-      <AboutImg src="/static/5dd551b627c9c3d876134ad7fe8c05e0/21d0b/yellowLeaves.jpg" />
+      {/* <AboutImg src="/static/5dd551b627c9c3d876134ad7fe8c05e0/21d0b/yellowLeaves.jpg" /> */}
       <AboutDiv>
-        <StyledH1>About</StyledH1>
-        <StyledP>
-          I'm a web developer with a keen eye for detail. I enjoy problem
-          solving and finding ways to make web apps more intuitive and enjoyable
-          for users. Currently, I reside in Calgary, AB
-        </StyledP>
+        <ColorDiv>
+          <StyledH1>About</StyledH1>
+          <StyledP>
+            I'm a web developer with a keen eye for detail. I enjoy problem
+            solving and finding ways to make web apps more intuitive and
+            enjoyable for users. Currently, I reside in Calgary, AB
+          </StyledP>
 
-        <StyledP>{pageBreak}</StyledP>
-
-        <StyledH2>Languages & Frameworks </StyledH2>
-        <StyledP>
-          JavaScript | HTML | CSS | Node.js | Ruby on Rails | PSQL
-        </StyledP>
-        <StyledP>{pageBreak}</StyledP>
-        <StyledH2>Learning </StyledH2>
-        <StyledP>Python | AWS | TypeScript</StyledP>
-        <StyledP>{pageBreak}</StyledP>
-        <StyledH2>Guilty Programming Pleasure </StyledH2>
-        <StyledP>
-          Putzing around in React-Spring and adding animations to anything and
-          everything.
-        </StyledP>
-        <StyledP>{pageBreak}</StyledP>
+          <StyledP>{pageBreak}</StyledP>
+        </ColorDiv>
+        <Colors>
+          <ColorDiv className="one">
+            <StyledH2>Languages & Frameworks </StyledH2>
+            <StyledP>
+              JavaScript | HTML | CSS | Node.js | Ruby on Rails | PSQL
+            </StyledP>
+            <StyledP>{pageBreak}</StyledP>
+          </ColorDiv>
+          <ColorDiv className="two">
+            <StyledH2>Learning </StyledH2>
+            <StyledP>Python | AWS | TypeScript</StyledP>
+            <StyledP>{pageBreak}</StyledP>
+          </ColorDiv>
+          <ColorDiv className="three">
+            <StyledH2>Guilty Programming Pleasure </StyledH2>
+            <StyledP>
+              Putzing around in React-Spring and adding animations to anything
+              and everything.
+            </StyledP>
+            <StyledP>{pageBreak}</StyledP>
+          </ColorDiv>
+        </Colors>
       </AboutDiv>
     </ContainerDiv>
-    <AboutImg className="fork"></AboutImg>
     <StyledH1 className="tidbits">Tidbits</StyledH1>
     <StyledUl>
       <li>
@@ -192,6 +242,7 @@ const About = () => (
         </p>
       </li>
     </StyledUl>
+    <AboutImg className="fork"></AboutImg>
     {/* <AboutImg className="fork"></AboutImg> */}
   </Layout>
 )
