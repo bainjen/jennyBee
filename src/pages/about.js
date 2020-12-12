@@ -175,10 +175,26 @@ const About = () => (
           <StyledP className="aboutP">
             I'm a web developer with a keen eye for detail. I enjoy problem
             solving and finding ways to make web apps more intuitive and
-            enjoyable for users. Currently, I reside in Calgary, AB
+            enjoyable for users.
+            <br></br>
+            --------
+            <br></br>Before switching careers, I worked as an executive
+            assistant and an ESL teacher. These experiences provided an
+            excellent opportunity to hone my communication and organizational
+            skills while learning a lot about how humans interact with
+            technology for both work and learning purposes.
+            <br></br>
+            --------
+            <br></br>
+            My love for helping people is what propels me to create apps! It's
+            exciting to make something that people want to use, or at the very
+            least, something they don't curse using.
+            <br></br>
+            --------
+            <br></br>Currently, I reside in Calgary, AB
           </StyledP>
 
-          <StyledP>{pageBreak}</StyledP>
+          {/* <StyledP>{pageBreak}</StyledP> */}
         </ColorDiv>
         <Colors>
           <ColorDiv className="one">
