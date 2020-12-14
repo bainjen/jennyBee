@@ -61,7 +61,9 @@ const StyledLink = styled(Link)`
 
   &:visited {
     text-decoration: none;
-    color: ${props => props.theme.shutter};
+    /* color: bisque; */
+    color: white;
+    /* color: ${props => props.theme.shutter}; */
   }
   &:link {
     text-decoration: none;
@@ -71,7 +73,7 @@ const StyledLink = styled(Link)`
   }
   &:hover {
     text-decoration: none;
-    color: ${props => props.theme.tan};
+    color: ${props => props.theme.shutters};
   }
 `
 
