@@ -51,7 +51,7 @@ You eagerly check the console for your love note to snails only to discover the 
 
 You mutter indignantly to nobody in particular:
 
-_Erh, yes it is! I defined 🐌 when I set it equal to `favAnimal` using const. Do you even have eyes, computer!? 👀_
+_Erh, yes it is! I defined `(🐌 )` when I set it equal to `favAnimal` using const. Do you even have eyes, computer!? 👀_
 
 The computer doesn't respond to your inquiry. What a jerk! Suddenly you feel defeated.
 
@@ -61,7 +61,7 @@ Twenty minutes of experimentation later, it turns out you simply forgot that "sn
 const favAnimal = "snail"
 ```
 
-![example of js error](../../images/errors/error.png)
+![example of js error](../../../images/errors/error.png)
 
 Admittedly the above example is simplistic. Nonetheless, that was me the first ~~-50-~~ few times I opened my terminal. To be fair, the above error message is 9 lines long, even though the only thing we truly care about it the type of error and the location of the error, which we can see is in example.js on line 1.
 
@@ -167,7 +167,13 @@ Full of hope, we refresh the browser again:
 Routing Error: uninitialized constant BooksController
 ```
 
-This word controller is familiar to us, but we're still new, so we do a quick search to remember where this controller goes and what exactly needs to go inside of the controller...Aha! We add a file to our app folder: `/controllers/books_controller.rb`. And define the index action. This snippet of code should get us started:
+This word controller is familiar to us, but we're still new, so we do a quick search to remember where this controller goes and what exactly needs to go inside of the controller...Aha! We add a file to our app folder:
+
+```
+/controllers/books_controller.rb
+```
+
+And define the index action. This snippet of code should get us started:
 
 ```ruby
 class BooksController < ApplicationController
@@ -182,11 +188,23 @@ It seems likely we will need to add more to this later but for the moment, our f
 Template is missing: Missing template books/index
 ```
 
-![template is missing error](../../images/errors/template_missing.png)
+![template is missing error](../../../images/errors/template_missing.png)
 
-###### _(above is an example of a template error in Rails. That looks like a lot of red text yelling at us, but in reality, it's just a friendly reminder that we are missing an erb file in our views folder that corresponds with our route.)_
+###### _above is an example of a template error in Rails. That looks like a lot of red text yelling at us, but in reality, it's just a friendly reminder that we are missing an erb file in our views folder that corresponds with our route._
 
-A template? We aren't certain what Rails wants from us. We search 'Rails template is missing error' and see that we are not alone our confusion. The coding world has not let us down. The browser is throwing an error because it doesn't know what to render. Internet strangers suggest we create a views page and name it using the name of our controller and the action we are calling: `app/views/books/index.html.erb` We type in `<p>HELLO WORLD!</p>`, anxious to see if anything will render...
+A template? We aren't certain what Rails wants from us. We search 'Rails template is missing error' and see that we are not alone our confusion. The coding world has not let us down. The browser is throwing an error because it doesn't know what to render. Internet strangers suggest we create a views page and name it using the name of our controller and the action we are calling:
+
+```
+app/views/books/index.html.erb
+```
+
+We type in:
+
+```html
+<p>HELLO WORLD!</p>
+```
+
+anxious to see if anything will render...
 
 IT DOES! WE'VE ESCAPED THE GAUNTLET OF ERRORS!
 
@@ -220,7 +238,7 @@ Happy coding!
 
 ![happy coding](https://media.giphy.com/media/PiQejEf31116URju4V/giphy.gif)
 
-## **Resources**
+<!-- ## **Resources**
 
 - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong
 
@@ -236,4 +254,4 @@ Happy coding!
 
 - https://www.freecodecamp.org/news/test-driven-development-what-it-is-and-what-it-is-not-41fa6bca02a2/
 
-- https://roberteshleman.com/blog/2014/07/09/learning-rails-via-error-driven-development/
+- https://roberteshleman.com/blog/2014/07/09/learning-rails-via-error-driven-development/ -->

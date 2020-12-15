@@ -5,7 +5,9 @@ import styled from "styled-components"
 import { device } from "./devices"
 
 const StyledPre = styled.pre`
-  background-color: #fffff7;
+  /* background-color: bisque; */
+  background-color: #ffe4c447;
+  /* background-color: ${props => props.theme.softPink}; */
   padding: 10px;
   border-radius: 5px;
   padding-top: 40px;
@@ -22,7 +24,7 @@ const LanguageTag = styled.div`
   margin-top: -40px;
   line-height: 25px;
   height: 25px;
-  background-color: green;
+  background-color: ${props => props.theme.shutters};
   color: whitesmoke;
   font-family: "Nunito", sans-serif;
   font-weight: 500;
@@ -39,6 +41,7 @@ const theme = {
   plain: {
     color: "#b16286",
     backgroundColor: "#f6f8fa",
+    // backgroundColor: `${props => props.theme.shutters}`,
   },
   styles: [
     {
@@ -112,7 +115,10 @@ const theme = {
 
 export default ({ children, className }) => {
   // Pull the className
-  const language = className.replace(/language-/, "") || ""
+
+  const hasOriginalClass = className ? true : false
+  const language =
+    (hasOriginalClass && className.replace(/language-/, "")) || ""
 
   return (
     <Highlight
@@ -123,7 +129,7 @@ export default ({ children, className }) => {
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <StyledPre className={className}>
-          <LanguageTag>{language}</LanguageTag>
+          {hasOriginalClass && <LanguageTag>{language}</LanguageTag>}
           {tokens.map((line, index) => {
             const lineProps = getLineProps({ line, key: index })
             return (

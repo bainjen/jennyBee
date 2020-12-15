@@ -9,7 +9,13 @@ import { device } from "./devices"
 import Nav from "./Nav"
 
 const components = {
-  pre: props => <div className="CodeBlock" {...props}></div>,
+  pre: props => (
+    <div
+      className="CodeBlock"
+      style={{ position: "relative" }}
+      {...props}
+    ></div>
+  ),
   code: CodeBlock,
 }
 
