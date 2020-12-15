@@ -11,7 +11,9 @@ const PostsContainer = styled.div`
   grid-template-rows: auto;
   column-gap: 2vw;
   row-gap: 2vw;
-
+  @media ${device.mobileL} {
+    grid-template-columns: 1fr 1fr;
+  }
   @media ${device.tablet} {
     grid-template-columns: 1fr 1fr 1fr;
   }

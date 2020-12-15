@@ -27,7 +27,7 @@ const Title = styled.h2`
 const StyledP = styled.p`
   color: ${props => props.theme.green};
   @media ${device.laptop} {
-    text-align: justify;
+    /* text-align: justify; */
   }
 `
 const LineDiv = styled.div`
