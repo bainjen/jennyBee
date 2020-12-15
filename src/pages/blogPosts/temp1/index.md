@@ -7,3 +7,7 @@ description: "This is Gato's post"
 ---
 
 DAHOE!
+
+<button onClick={() => console.log("click")}>click me</button>
+
+hello

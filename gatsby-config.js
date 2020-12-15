@@ -27,6 +27,29 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 2000,
+            },
+          },
+          {
+            resolve: `gatsby-plugin-styled-components`,
+            options: {
+              displayName: false,
+            },
+          },
+          {
+            resolve: `@weknow/gatsby-remark-twitter`,
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blogPosts`,
@@ -58,29 +81,6 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 2000,
-            },
-          },
-          {
-            resolve: `gatsby-plugin-styled-components`,
-            options: {
-              displayName: false,
-            },
-          },
-          {
-            resolve: `@weknow/gatsby-remark-twitter`,
-          },
-        ],
       },
     },
     {

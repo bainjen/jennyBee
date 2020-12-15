@@ -35,10 +35,12 @@ const LineDiv = styled.div`
   margin-bottom: 1em;
 `
 const BlogCard = ({ title, date, description, className, path }) => {
+  const [year, month, day] = date.split("-")
+
   return (
     <ColorDiv className={className}>
       <Title>{title}</Title>
-      <StyledP>{date}</StyledP>
+      <StyledP>{`${month}/${day}/${year}`}</StyledP>
       <LineDiv />
       <StyledP>{description}</StyledP>
       <Link to={path}>Read more</Link>

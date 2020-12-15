@@ -38,6 +38,8 @@ export const lightTheme = {
   lilac: "#C3A3AE",
   purple: "#766EC1",
   green: "#223C38",
+  midGreen: "#62a99e",
+  lightGreen: "#ccdcda69",
   shutters: "#cbc1db",
   lightPink: "#F1C3C5",
   dustyRose: "#D09290",

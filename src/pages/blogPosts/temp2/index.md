@@ -6,4 +6,8 @@ author: "Puglee"
 description: "This is Puglees's FABULOUSOOOOOOO post"
 ---
 
+import Button from './Button';
+
+<Button name="gato" />
+
 HALLO

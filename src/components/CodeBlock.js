@@ -6,8 +6,9 @@ import { device } from "./devices"
 
 const StyledPre = styled.pre`
   /* background-color: bisque; */
-  background-color: #ffe4c447;
-  /* background-color: ${props => props.theme.softPink}; */
+  /* background-color: #ffe4c447; */
+  /* very light mint */
+  background-color: ${props => props.theme.lightGreen};
   padding: 10px;
   border-radius: 5px;
   padding-top: 40px;
@@ -24,7 +25,8 @@ const LanguageTag = styled.div`
   margin-top: -40px;
   line-height: 25px;
   height: 25px;
-  background-color: ${props => props.theme.shutters};
+  /* background-color: ${props => props.theme.green}; */
+  background-color: ${props => props.theme.midGreen};
   color: whitesmoke;
   font-family: "Nunito", sans-serif;
   font-weight: 500;
@@ -40,7 +42,8 @@ const LanguageTag = styled.div`
 const theme = {
   plain: {
     color: "#b16286",
-    backgroundColor: "#f6f8fa",
+    // color: "#cbc1db",
+    backgroundColor: "#BC853B",
     // backgroundColor: `${props => props.theme.shutters}`,
   },
   styles: [
