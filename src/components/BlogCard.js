@@ -34,6 +34,26 @@ const LineDiv = styled.div`
   border-bottom: solid 1px;
   margin-bottom: 1em;
 `
+const StyledLink = styled(Link)`
+  color: ${props => props.theme.lilac};
+
+  &:visited {
+    text-decoration: none;
+    /* color: bisque; */
+    color: white;
+    /* color: ${props => props.theme.shutter}; */
+  }
+  &:link {
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: none;
+    color: ${props => props.theme.shutters};
+  }
+`
 const BlogCard = ({ title, date, description, className, path }) => {
   const [year, month, day] = date.split("-")
 
@@ -43,7 +63,7 @@ const BlogCard = ({ title, date, description, className, path }) => {
       <StyledP>{`${month}/${day}/${year}`}</StyledP>
       <LineDiv />
       <StyledP>{description}</StyledP>
-      <Link to={path}>Read more</Link>
+      <StyledLink to={path}>Read more</StyledLink>
     </ColorDiv>
   )
 }

@@ -78,6 +78,7 @@ const StyledP = styled.p`
 const StyledBlogImage = styled.img`
   margin: 24px 0 24px;
   max-width: 80vw;
+  border-radius: 5px;
   @media ${device.tablet} {
     max-height: 50vh;
   }

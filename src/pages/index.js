@@ -5,8 +5,8 @@ import Layout from "../components/Layout"
 
 const ImageDiv = styled.div`
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
-    url("/static/a70c7c9238902b4a25c534ac56933199/21d0b/reach.jpg") no-repeat
-      bottom right;
+    url("/static/reach-a70c7c9238902b4a25c534ac56933199.jpg") no-repeat bottom
+      right;
   width: 100%;
   height: 100vh;
   position: fixed;

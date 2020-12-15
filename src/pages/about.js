@@ -46,8 +46,8 @@ const AboutImg = styled.div`
   }
 
   &.fork {
-    background: url("/static/390cbe93f601968ef48231b812a0e7c3/21d0b/fork.jpg")
-      bottom center;
+    background: url("/static/fork-390cbe93f601968ef48231b812a0e7c3.jpg") bottom
+      center;
     display: block;
     height: 250px;
     background-size: cover;
