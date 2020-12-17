@@ -3,15 +3,21 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import { device } from "../devices"
 import Layout from "../components/Layout"
+import BackgroundImage from "gatsby-background-image"
 
-const ImageDiv = styled.div`
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
-    url(${props => props.srcURL}) no-repeat bottom right;
-  width: 100%;
-  height: 100vh;
+const WrapperDiv = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100vh;
+`
+const ImageDiv = styled(BackgroundImage)`
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)); */
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   padding-left: 12vw;
   padding-top: 210px;
@@ -93,33 +99,50 @@ const StyledP = styled.p`
 `
 
 const Home = props => {
-  const imgPath = props.data.imageSharp.original.src
+  const imgPath = props.data.file.childImageSharp.fluid
+  // const backgroundStack = []
 
   const path = props.path
 
   return (
     <Layout path={path}>
-      <ImageDiv srcURL={imgPath}>
-        <StyledH1>Hello, friend!</StyledH1>
-        <StyledH1>I'm Jennifer,</StyledH1>
-        <StyledH1>a full stack web developer.</StyledH1>
-        <StyledP>
-          Thank you for stopping by. <br></br>I'm thrilled you've made it! --
-          enjoy
-          <span role="img" aria-label="sunflower">
-            🌻
-          </span>
-        </StyledP>
-      </ImageDiv>
+      <WrapperDiv>
+        <ImageDiv
+          fluid={imgPath}
+          // backgroundColor={
+          //   "linear-gradient(to bottom,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0))"
+          // }
+          backgroundColor={"blue"}
+        >
+          <StyledH1>Hello, friend!</StyledH1>
+          <StyledH1>I'm Jennifer,</StyledH1>
+          <StyledH1>a full stack web developer.</StyledH1>
+          <StyledP>
+            Thank you for stopping by. <br></br>I'm thrilled you've made it! --
+            enjoy
+            <span role="img" aria-label="sunflower">
+              🌻
+            </span>
+          </StyledP>
+        </ImageDiv>
+      </WrapperDiv>
     </Layout>
   )
 }
 
 export const HomeImageQuery = graphql`
   query HomeImageQuery {
-    imageSharp(id: { eq: "50f2f439-1363-567e-bb18-cb1aaffcc9fe" }) {
-      original {
-        src
+    file(relativePath: { eq: "reach.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1920) {
+          aspectRatio
+          base64
+          src
+          srcSet
+          srcSetWebp
+          srcWebp
+          sizes
+        }
       }
     }
   }
