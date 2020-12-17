@@ -17,19 +17,15 @@ const ImageDiv = styled.div`
   padding-top: 210px;
 
   @media ${device.laptopL} {
-    /* padding-left: 16vw; */
-    /* padding-top: 33vh; */
     padding-top: 300px;
   }
 
   @media ${device.desktop} {
-    /* padding-left: 16vw; */
-    /* padding-top: 33vh; */
     padding-top: 400px;
   }
   @media ${device.desktop} {
     padding-left: 16vw;
-    /* padding-top: 33vh; */
+
     padding-top: 500px;
   }
 `
@@ -87,9 +83,7 @@ const StyledP = styled.p`
   font-size: 16px;
   margin-top: 1em;
   font-weight: 500;
-  /* background: #ebc091; */
   padding: 10px;
-  /* padding-right: 100px; */
   @media ${device.laptop} {
     font-size: 24px;
   }
@@ -100,8 +94,11 @@ const StyledP = styled.p`
 
 const Home = props => {
   const imgPath = props.data.imageSharp.original.src
+
+  const path = props.path
+
   return (
-    <Layout>
+    <Layout path={path}>
       <ImageDiv srcURL={imgPath}>
         <StyledH1>Hello, friend!</StyledH1>
         <StyledH1>I'm Jennifer,</StyledH1>

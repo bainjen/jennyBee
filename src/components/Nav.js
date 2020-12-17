@@ -1,9 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { device } from "../devices"
-
-// import "./nav.css"
 
 const StyledNav = styled.nav`
   text-decoration: none;
@@ -57,12 +55,12 @@ const StyledH1 = styled.h1`
   }
 `
 const StyledLink = styled(Link)`
-  color: ${props => props.theme.lilac};
+  color: ${props => props.theme.green};
 
   &:visited {
     text-decoration: none;
     /* color: bisque; */
-    color: white;
+    /* color: white; */
     /* color: ${props => props.theme.shutter}; */
   }
   &:link {
@@ -73,11 +71,23 @@ const StyledLink = styled(Link)`
   }
   &:hover {
     text-decoration: none;
-    color: ${props => props.theme.shutters};
+    color: ${props => props.theme.lilac};
+    /* color: ${props => props.theme.shutters}; */
   }
+  ${props =>
+    props.isMainPage &&
+    css`
+      color: white;
+      &:hover {
+        text-decoration: underline;
+        color: white;
+      }
+    `}
 `
 
-const Nav = () => {
+const Nav = props => {
+  const { isMainPage } = props
+
   const navLabels = [
     {
       name: "Home",
@@ -104,7 +114,9 @@ const Nav = () => {
   const links = navLabels.map(label => {
     return (
       <li key={label.name} className="nav-list-item">
-        <StyledLink to={label.path}>{label.name}</StyledLink>
+        <StyledLink isMainPage={isMainPage} to={label.path}>
+          {label.name}
+        </StyledLink>
       </li>
     )
   })
