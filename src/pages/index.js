@@ -1,12 +1,12 @@
 import React from "react"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 import { device } from "../devices"
 import Layout from "../components/Layout"
 
 const ImageDiv = styled.div`
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
-    url("/static/reach-a70c7c9238902b4a25c534ac56933199.jpg") no-repeat bottom
-      right;
+    url(${props => props.srcURL}) no-repeat bottom right;
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -98,21 +98,34 @@ const StyledP = styled.p`
   }
 `
 
-const Home = () => (
-  <Layout>
-    <ImageDiv>
-      <StyledH1>Hello, friend!</StyledH1>
-      <StyledH1>I'm Jennifer,</StyledH1>
-      <StyledH1>a full stack web developer.</StyledH1>
-      <StyledP>
-        Thank you for stopping by. <br></br>I'm thrilled you've made it! --
-        enjoy
-        <span role="img" aria-label="sunflower">
-          🌻
-        </span>
-      </StyledP>
-    </ImageDiv>
-  </Layout>
-)
+const Home = props => {
+  const imgPath = props.data.imageSharp.original.src
+  return (
+    <Layout>
+      <ImageDiv srcURL={imgPath}>
+        <StyledH1>Hello, friend!</StyledH1>
+        <StyledH1>I'm Jennifer,</StyledH1>
+        <StyledH1>a full stack web developer.</StyledH1>
+        <StyledP>
+          Thank you for stopping by. <br></br>I'm thrilled you've made it! --
+          enjoy
+          <span role="img" aria-label="sunflower">
+            🌻
+          </span>
+        </StyledP>
+      </ImageDiv>
+    </Layout>
+  )
+}
+
+export const HomeImageQuery = graphql`
+  query HomeImageQuery {
+    imageSharp(id: { eq: "50f2f439-1363-567e-bb18-cb1aaffcc9fe" }) {
+      original {
+        src
+      }
+    }
+  }
+`
 
 export default Home

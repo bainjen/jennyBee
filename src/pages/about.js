@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 import { device } from "../devices"
 import AboutCard from "../components/AboutCard"
@@ -46,8 +47,7 @@ const AboutImg = styled.div`
   }
 
   &.fork {
-    background: url("/static/fork-390cbe93f601968ef48231b812a0e7c3.jpg") bottom
-      center;
+    background: url(${props => props.srcURL}) bottom center;
     display: block;
     height: 250px;
     background-size: cover;
@@ -118,7 +118,9 @@ const cardInfo = [
   },
 ]
 
-const About = () => {
+const About = props => {
+  const imgPath = props.data.imageSharp.original.src
+
   const cards = cardInfo.map(c => {
     return (
       <AboutCard
@@ -196,8 +198,18 @@ const About = () => {
           </p>
         </li>
       </StyledUl>
-      <AboutImg className="fork"></AboutImg>
+      <AboutImg srcURL={imgPath} className="fork"></AboutImg>
     </Layout>
   )
 }
+
+export const FooterImageQuery = graphql`
+  query FooterImageQuery {
+    imageSharp(id: { eq: "70df6883-378c-56cc-8b59-5c53e388dc22" }) {
+      original {
+        src
+      }
+    }
+  }
+`
 export default About
