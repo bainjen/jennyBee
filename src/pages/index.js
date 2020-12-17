@@ -13,7 +13,6 @@ const WrapperDiv = styled.div`
   height: 100vh;
 `
 const ImageDiv = styled(BackgroundImage)`
-  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)); */
   background-position: bottom right;
   background-repeat: no-repeat;
   width: 100%;
@@ -41,11 +40,7 @@ const StyledH1 = styled.h1`
   margin-bottom: 25px;
   color: white;
   font-weight: 600;
-  /* background: ${props => props.theme.salmon}; */
-  //hand orange
   background: #e36346;
-  // hand pink
-  /* background: #f99a90; */
   padding: 10px;
   padding-right: 10px;
   width: fit-content;
@@ -70,7 +65,6 @@ const StyledH1 = styled.h1`
 
   @media ${device.laptop} {
     font-size: 48px;
-    /* padding-right: 100px; */
   }
 
   @media ${device.laptopL} {
@@ -100,20 +94,18 @@ const StyledP = styled.p`
 
 const Home = props => {
   const imgPath = props.data.file.childImageSharp.fluid
-  // const backgroundStack = []
+  // stacking images -- adds gradient over image path
+  const backgroundStack = [
+    `linear-gradient(to bottom,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0))`,
+    imgPath,
+  ]
 
   const path = props.path
 
   return (
     <Layout path={path}>
       <WrapperDiv>
-        <ImageDiv
-          fluid={imgPath}
-          // backgroundColor={
-          //   "linear-gradient(to bottom,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0))"
-          // }
-          backgroundColor={"blue"}
-        >
+        <ImageDiv fluid={backgroundStack}>
           <StyledH1>Hello, friend!</StyledH1>
           <StyledH1>I'm Jennifer,</StyledH1>
           <StyledH1>a full stack web developer.</StyledH1>
