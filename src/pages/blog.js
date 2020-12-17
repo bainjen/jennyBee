@@ -28,7 +28,7 @@ const StyledH1 = styled.h1`
 `
 export const AllBlogsQuery = graphql`
   query AllBlogPosts {
-    allMdx {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
           frontmatter {
