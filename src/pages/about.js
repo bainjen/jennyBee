@@ -71,10 +71,10 @@ const StyledH1 = styled.h1`
   text-transform: uppercase;
   margin-top: 0.25em;
   margin-bottom: 0.12em;
-  font-size: 24px;
+  font-size: 2em;
   letter-spacing: 2px;
   @media ${device.laptop} {
-    font-size: 28px;
+    /* font-size: 28px; */
     margin-top: 0.5em;
     margin-bottom: 0.25em;
   }

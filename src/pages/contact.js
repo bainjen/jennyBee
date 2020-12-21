@@ -25,10 +25,11 @@ const StyledH1 = styled.h1`
   /* margin-bottom: 20px; */
   margin-top: 0.25em;
   margin-bottom: 0.12em;
-  font-size: 24px;
+  font-size: 2em;
   letter-spacing: 2px;
+  text-transform: uppercase;
   @media ${device.laptop} {
-    font-size: 32px;
+    /* font-size: 32px; */
     margin-top: 0.5em;
     margin-bottom: 0.25em;
   }

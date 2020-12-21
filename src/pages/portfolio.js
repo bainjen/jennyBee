@@ -6,44 +6,66 @@ import { device } from "../devices"
 import Img from "gatsby-image"
 
 const Header = styled.h1`
-  font-size: 48px;
-  margin: 1em 0;
+  margin: 0.5em 0;
+  font-size: 2em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  @media ${device.laptop} {
+    font-size: 48px;
+    margin: 1em 0;
+  }
 `
 const PieceContainer = styled.div`
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   background-color: #f3f3f3;
   padding: 1rem;
-  & > * {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+
+  @media ${device.laptop} {
+    flex-direction: row;
+    & > * {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
   }
 `
 const ImageContainer = styled.div`
-  position: relative;
-  padding: 0 1rem;
-  max-width: 50rem;
+  @media ${device.laptop} {
+    padding: 0 1rem;
+    position: relative;
+    max-width: 50rem;
+  }
 `
 const TextContainer = styled.div`
-  position: -webkit-sticky;
-  position: sticky;
-  width: 100%;
-  margin: 0;
-  z-index: 0;
-  top: 10vh;
-  height: 100vh;
+  margin-bottom: 1em;
+  @media ${device.laptop} {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    z-index: 0;
+    top: 10vh;
+    height: 100vh;
+  }
 `
 
 const Title = styled.h1`
   font-size: 32px;
   margin: 0.25em 0;
+  font-weight: 400;
 `
 const Stack = styled.p`
-  font-size: 24px;
-  margin: 0.25em 0;
+  font-size: 20px;
+  margin: 0.5em 0;
+  @media ${device.mobileL} {
+    font-size: 24px;
+    margin: 0.25em 0;
+  }
 `
 const Description = styled.p`
   font-size: 16px;
@@ -51,7 +73,9 @@ const Description = styled.p`
   margin: 0.25em 0;
 `
 
-const RepoLink = styled.a``
+const RepoLink = styled.a`
+  margin: 1em 0;
+`
 
 const Portfolio = ({ data }) => {
   console.log("data", data)
