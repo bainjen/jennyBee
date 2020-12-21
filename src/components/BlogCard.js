@@ -35,13 +35,14 @@ const LineDiv = styled.div`
   margin-bottom: 1em;
 `
 const StyledLink = styled(Link)`
-  color: ${props => props.theme.lilac};
+  /* color: ${props => props.theme.lilac}; */
+  color: ${props => props.theme.green};
 
   &:visited {
     text-decoration: none;
     /* color: bisque; */
-    color: white;
-    /* color: ${props => props.theme.shutter}; */
+    /* color: white; */
+    color: ${props => props.theme.green};
   }
   &:link {
     text-decoration: none;
@@ -51,7 +52,7 @@ const StyledLink = styled(Link)`
   }
   &:hover {
     text-decoration: none;
-    color: ${props => props.theme.shutters};
+    color: ${props => props.theme.salmon};
   }
 `
 const BlogCard = ({ title, date, description, className, path }) => {
