@@ -27,37 +27,37 @@ const PieceContainer = styled.div`
 
   @media ${device.laptop} {
     flex-direction: row;
-    & > * {
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-    }
   }
 `
 const ImageContainer = styled.div`
   @media ${device.laptop} {
     padding: 0 1rem;
     position: relative;
-    max-width: 50rem;
+    width: 60%;
   }
 `
+const ImageDiv = styled(Img)`
+  margin: 1em 0;
+  border-radius: 8px;
+`
+
 const TextContainer = styled.div`
   margin-bottom: 1em;
   @media ${device.laptop} {
     position: -webkit-sticky;
     position: sticky;
-    width: 100%;
+    width: 40%;
     margin: 0;
     z-index: 0;
     top: 10vh;
     height: 100vh;
+    padding: 0 1em;
   }
 `
 
 const Title = styled.h1`
   font-size: 32px;
   margin: 0.25em 0;
-  font-weight: 400;
 `
 const Stack = styled.p`
   font-size: 20px;
@@ -70,11 +70,28 @@ const Stack = styled.p`
 const Description = styled.p`
   font-size: 16px;
   font-style: italic;
-  margin: 0.25em 0;
+  margin: 0.25em 0 0.5em 0;
+  text-align: justify;
 `
 
 const RepoLink = styled.a`
   margin: 1em 0;
+  color: ${props => props.theme.lilac};
+
+  &:visited {
+    text-decoration: none;
+    color: ${props => props.theme.mustard};
+  }
+  &:link {
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: none;
+    color: ${props => props.theme.tan};
+  }
 `
 
 const Portfolio = ({ data }) => {
@@ -97,13 +114,15 @@ const Portfolio = ({ data }) => {
             the run. The efficiency value of each simulation run is averaged to
             make an overall efficiency measure for each combine configuration.
           </Description>
-          <RepoLink>visit repository </RepoLink>
+          <RepoLink href="https://github.com/bainjen/CARS" target="_blank">
+            visit repository{" "}
+          </RepoLink>
         </TextContainer>
         <ImageContainer>
-          <Img fluid={tempImg} />
-          <Img fluid={tempImg} />
-          <Img fluid={tempImg} />
-          <Img fluid={tempImg} />
+          <ImageDiv fluid={tempImg} />
+          <ImageDiv fluid={tempImg} />
+          <ImageDiv fluid={tempImg} />
+          <ImageDiv fluid={tempImg} />
         </ImageContainer>
       </PieceContainer>
     </Layout>
