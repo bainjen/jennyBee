@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import styled from "styled-components"
 import { device } from "../devices"
-import Img from "gatsby-image"
+import { portfolioData } from "../portfolioData"
 import PortfolioPiece from "../components/PortfolioPiece"
 
 const Header = styled.h1`
@@ -19,16 +19,26 @@ const Header = styled.h1`
 `
 
 const Portfolio = ({ data }) => {
-  const wizardImages = data.allFile.nodes.filter(d =>
-    d.relativePath.includes("combine_wizard")
-  )
-
-  console.log(wizardImages)
+  const pieces = portfolioData.map((d, i) => {
+    const images = data.allFile.nodes.filter(node =>
+      node.relativePath.includes(d.id)
+    )
+    return (
+      <PortfolioPiece
+        key={i}
+        images={images}
+        title={d.title}
+        stack={d.stack}
+        description={d.description}
+        link={d.link}
+      />
+    )
+  })
 
   return (
     <Layout>
       <Header>Selected Projects </Header>
-      <PortfolioPiece images={wizardImages} />
+      {pieces}
     </Layout>
   )
 }
