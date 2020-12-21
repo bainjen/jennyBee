@@ -10,29 +10,45 @@ const Header = styled.h1`
   margin: 1em 0;
 `
 const PieceContainer = styled.div`
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  position: sticky;
-  height: 80%;
+  background-color: #f3f3f3;
+  padding: 1rem;
+  & > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
 `
 const ImageContainer = styled.div`
-  width: 50vw;
+  position: relative;
+  padding: 0 1rem;
+  max-width: 50rem;
 `
 const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 40vw;
-  margin-right: 5vw;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  margin: 0;
+  z-index: 0;
+  top: 10vh;
+  height: 100vh;
 `
+
 const Title = styled.h1`
   font-size: 32px;
   margin: 0.25em 0;
 `
 const Stack = styled.p`
   font-size: 24px;
+  margin: 0.25em 0;
 `
 const Description = styled.p`
   font-size: 16px;
   font-style: italic;
+  margin: 0.25em 0;
 `
 
 const RepoLink = styled.a``
@@ -60,6 +76,8 @@ const Portfolio = ({ data }) => {
           <RepoLink>visit repository </RepoLink>
         </TextContainer>
         <ImageContainer>
+          <Img fluid={tempImg} />
+          <Img fluid={tempImg} />
           <Img fluid={tempImg} />
           <Img fluid={tempImg} />
         </ImageContainer>
