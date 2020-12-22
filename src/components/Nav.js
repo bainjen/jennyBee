@@ -66,11 +66,12 @@ const StyledLink = styled(Link)`
   }
   &:active {
     text-decoration: none;
+    color: ${props => props.theme.lightSalmon};
   }
   &:hover {
     /* text-decoration: none; */
     text-decoration: underline;
-    color: ${props => props.theme.lilac};
+    color: ${props => props.theme.sunflower};
   }
   ${props =>
     props.isMainPage &&

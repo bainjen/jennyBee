@@ -11,13 +11,13 @@ const PostsContainer = styled.div`
   grid-template-rows: auto;
   column-gap: 2vw;
   row-gap: 2vw;
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     grid-template-columns: 1fr 1fr;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  @media ${device.laptopL} {
+  @media ${device.desktop} {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `
