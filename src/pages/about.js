@@ -74,14 +74,19 @@ const StyledH1 = styled.h1`
   font-size: 2em;
   letter-spacing: 2px;
   @media ${device.laptop} {
-    /* font-size: 28px; */
     margin-top: 0.5em;
     margin-bottom: 0.25em;
+    font-size: 48px;
   }
 
   &.tidbits {
     margin-top: 2em;
     margin-bottom: 1em;
+    @media ${device.laptop} {
+      margin-top: 0.5em;
+      margin-bottom: 0.25em;
+      font-size: 48px;
+    }
   }
 `
 

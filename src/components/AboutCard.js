@@ -40,7 +40,6 @@ const ColorDiv = styled.div`
   }
 `
 const StyledH2 = styled.h2`
-  /* color: ${props => props.theme.green}; */
   color: white;
   text-transform: uppercase;
   margin-top: 0.25em;
@@ -59,7 +58,6 @@ const StyledH2 = styled.h2`
 `
 
 const StyledP = styled.p`
-  /* color: ${props => props.theme.green}; */
   letter-spacing: 2px;
 
   color: white;
@@ -68,7 +66,6 @@ const StyledP = styled.p`
     margin-left: 0.25em;
   }
   @media ${device.laptop} {
-    /* text-align: justify; */
     font-size: 24px;
   }
   @media ${device.desktop} {

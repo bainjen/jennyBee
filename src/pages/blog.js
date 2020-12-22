@@ -25,6 +25,10 @@ const StyledH1 = styled.h1`
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 1em 0;
+  font-size: 2em;
+  @media ${device.laptop} {
+    font-size: 48px;
+  }
 `
 export const AllBlogsQuery = graphql`
   query AllBlogPosts {

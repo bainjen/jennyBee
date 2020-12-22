@@ -9,7 +9,6 @@ const PieceContainer = styled.div`
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  /* background-color: #f3f3f3; */
   background-color: #f3f3f3b0;
 
   padding: 1rem;
@@ -66,11 +65,11 @@ const Description = styled.p`
 
 const RepoLink = styled.a`
   margin: 1em 0;
-  color: ${props => props.theme.lilac};
+  color: ${props => props.theme.sunflower};
 
   &:visited {
     text-decoration: none;
-    color: ${props => props.theme.mustard};
+    color: ${props => props.theme.salmon};
   }
   &:link {
     text-decoration: none;
@@ -80,7 +79,7 @@ const RepoLink = styled.a`
   }
   &:hover {
     text-decoration: none;
-    color: ${props => props.theme.tan};
+    color: ${props => props.theme.darkSalmon};
   }
 `
 

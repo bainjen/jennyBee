@@ -69,7 +69,6 @@ const StyledLink = styled(Link)`
     color: ${props => props.theme.lightSalmon};
   }
   &:hover {
-    /* text-decoration: none; */
     text-decoration: underline;
     color: ${props => props.theme.sunflower};
   }
