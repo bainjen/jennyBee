@@ -47,7 +47,7 @@ export const PortfolioImageQuery = graphql`
     allFile(filter: { relativeDirectory: { eq: "portfolioImages" } }) {
       nodes {
         childImageSharp {
-          fluid(quality: 50, maxWidth: 800) {
+          fluid(quality: 70, maxWidth: 800) {
             aspectRatio
             base64
             src
