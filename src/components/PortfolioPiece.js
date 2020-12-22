@@ -9,11 +9,14 @@ const PieceContainer = styled.div`
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  background-color: #f3f3f3;
+  /* background-color: #f3f3f3; */
+  background-color: #f3f3f3b0;
+
   padding: 1rem;
 
   @media ${device.laptop} {
     flex-direction: row;
+    margin-bottom: 2em;
   }
 `
 const ImageContainer = styled.div`
@@ -36,7 +39,7 @@ const TextContainer = styled.div`
     width: 40%;
     margin: 0;
     z-index: 0;
-    top: 10vh;
+    top: 30vh;
     height: 100vh;
     padding: 0 1em;
   }

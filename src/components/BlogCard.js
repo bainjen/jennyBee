@@ -10,7 +10,8 @@ const ColorDiv = styled.div`
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 15px;
-  background-color: bisque;
+  /* background-color: bisque; */
+  background-color: ${props => props.theme.shutters};
   height: 350px;
 `
 const Title = styled.h2`
