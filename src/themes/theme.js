@@ -44,4 +44,5 @@ export const lightTheme = {
   lightPink: "#F1C3C5",
   dustyRose: "#D09290",
   softPink: "#FED5D6",
+  navColor: "#223C38",
 }

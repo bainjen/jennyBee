@@ -103,7 +103,7 @@ const Home = props => {
   const path = props.path
 
   return (
-    <Layout path={path}>
+    <Layout isMainPage={true}>
       <WrapperDiv>
         <ImageDiv fluid={backgroundStack}>
           <StyledH1>Hello, friend!</StyledH1>

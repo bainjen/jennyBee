@@ -37,9 +37,7 @@ const StyledMain = styled.main`
     padding-top: 50px;
   }
 `
-const Layout = ({ path, children }) => {
-  const isMainPage = path === "/"
-
+const Layout = ({ isMainPage, children }) => {
   return (
     <ThemeProvider theme={lightTheme}>
       <GlobalStyle />

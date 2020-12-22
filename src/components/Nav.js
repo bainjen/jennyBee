@@ -55,13 +55,10 @@ const StyledH1 = styled.h1`
   }
 `
 const StyledLink = styled(Link)`
-  color: ${props => props.theme.green};
+  color: ${props => props.theme.navColor};
 
   &:visited {
     text-decoration: none;
-    /* color: bisque; */
-    /* color: white; */
-    /* color: ${props => props.theme.shutter}; */
   }
   &:link {
     text-decoration: none;
@@ -70,9 +67,9 @@ const StyledLink = styled(Link)`
     text-decoration: none;
   }
   &:hover {
-    text-decoration: none;
+    /* text-decoration: none; */
+    text-decoration: underline;
     color: ${props => props.theme.lilac};
-    /* color: ${props => props.theme.shutters}; */
   }
   ${props =>
     props.isMainPage &&
