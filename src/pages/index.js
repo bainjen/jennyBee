@@ -40,7 +40,8 @@ const StyledH1 = styled.h1`
   margin-bottom: 25px;
   color: white;
   font-weight: 600;
-  background: #e36346;
+  background-color: ${props => props.theme.salmon};
+  /* background: #e36346; */
   padding: 10px;
   padding-right: 10px;
   width: fit-content;

@@ -43,6 +43,7 @@ const StyledH1 = styled.h1`
   font-family: ${props => props.theme.cursiveFont};
   font-size: 84px;
   color: ${props => props.theme.salmon};
+
   margin-bottom: 20px;
   @media ${device.laptop} {
     margin-bottom: 0;
