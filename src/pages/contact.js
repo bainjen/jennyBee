@@ -55,12 +55,25 @@ const StyledLink = styled.a`
 `
 
 const StyledP = styled.p`
-  font-size: 16px;
+  font-size: 14px;
   color: ${props => props.theme.green};
   margin-bottom: 1em;
   & span {
     margin-right: 1em;
   }
+  @media ${device.tablet} {
+    font-size: 18px;
+  }
+  @media ${device.laptop} {
+    font-size: 24px;
+  }
+`
+
+const StyledH6 = styled.h6`
+  margin: auto;
+  font-size: 16px;
+  font-weight: 200;
+  color: ${props => props.theme.green};
   @media ${device.tablet} {
     font-size: 18px;
   }
@@ -95,7 +108,10 @@ const Contact = () => {
             LinkedIn
           </StyledLink>
         </StyledP>
+
+        {/* <StyledH6>I'd love to hear from you!</StyledH6> */}
       </CenterDiv>
+      <StyledH6>Want to collaborate? Me too! Don't be a stranger 👋</StyledH6>
     </Layout>
   )
 }

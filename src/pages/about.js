@@ -149,15 +149,15 @@ const About = props => {
             --------
             <br></br>Before switching careers, I worked as an executive
             assistant and an ESL teacher. These experiences provided an
-            excellent opportunity to hone my communication and organizational
-            skills while learning a lot about how humans interact with
-            technology for both work and learning purposes.
+            excellent opportunity to sharpen my communication and organizational
+            skills whilst learning a lot about how humans interact with
+            technology.
             <br></br>
             --------
             <br></br>
             My love for helping people is what propels me to create apps! It's
             exciting to make something that people want to use, or at the very
-            least, something they don't curse using.
+            least, something they don't dread using 😉.
             <br></br>
             --------
             <br></br>Currently, I reside in Calgary, AB
@@ -172,7 +172,7 @@ const About = props => {
             🥕
           </span>
 
-          <p>I've never met a kitchen experiment I didn't enjoy.</p>
+          <p>I've never met a kitchen experiment I didn't like.</p>
         </li>
         <li>
           <span role="img" aria-label="dog">
@@ -188,7 +188,7 @@ const About = props => {
             👾
           </span>{" "}
           <p>
-            I live with my partner, James and two little monsters, Pippa &
+            I live with my partner, James, and two little monsters, Pippa &
             Prairie. We enjoy reality TV, getting scared while camping, and
             browsing bookstores for treasures.
           </p>
