@@ -8,7 +8,7 @@ description: "New to coding? Me too. Let's make peace with errors once and for a
 
 ## **Picture this:**
 
-A global pandemic strikes and you realize that the career path you started down isn't a fit for the long haul. You're spending all of your days locked indoors and the grocery store has run out of flour and yeast so your options for distraction are diminishing. Call it practicality or call it an existential life crisis, either way, you resort to doing some research about potential new career paths.
+A pandemic strikes and you realize that the career path you started down isn't a fit for the long haul. You're spending all of your days locked indoors and the grocery store has run out of flour and yeast so your options for distraction are diminishing. Call it practicality or call it an existential life crisis, either way, you resort to doing some research about potential new career paths.
 
 ![existential life crisis](https://media.giphy.com/media/AYC0liRZ9LoVq/giphy-downsized.gif)
 
