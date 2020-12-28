@@ -30,6 +30,7 @@ const Portfolio = ({ data }) => {
         title={d.title}
         stack={d.stack}
         description={d.description}
+        more={d.more}
         link={d.link}
       />
     )

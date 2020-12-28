@@ -38,7 +38,7 @@ const TextContainer = styled.div`
     width: 40%;
     margin: 0;
     z-index: 0;
-    top: 30vh;
+    top: 10vh;
     height: 100vh;
     padding: 0 1em;
   }
@@ -50,10 +50,9 @@ const Title = styled.h1`
 `
 const Stack = styled.p`
   font-size: 20px;
-  margin: 0.5em 0;
+  margin: 0.75em 0;
   @media ${device.mobileL} {
     font-size: 24px;
-    margin: 0.25em 0;
   }
 `
 const Description = styled.p`
@@ -61,6 +60,12 @@ const Description = styled.p`
   font-style: italic;
   margin: 0.25em 0 0.5em 0;
   text-align: justify;
+`
+
+const StyledH4 = styled.h4`
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 1em;
 `
 
 const RepoLink = styled.a`
@@ -84,7 +89,7 @@ const RepoLink = styled.a`
 `
 
 const PortfolioPiece = props => {
-  const { images, title, stack, description, link } = props
+  const { images, title, stack, description, link, more } = props
 
   const portfolioImages = images.map((image, i) => {
     return <ImageDiv key={i} fluid={image.childImageSharp.fluid} />
@@ -95,7 +100,10 @@ const PortfolioPiece = props => {
       <TextContainer>
         <Title>{title}</Title>
         <Stack>{stack}</Stack>
+        <StyledH4>Project Description: </StyledH4>
         <Description>{description}</Description>
+        <StyledH4>What I learned: </StyledH4>
+        <Description>{more}</Description>
         <RepoLink href={link} target="_blank">
           visit repository{" "}
         </RepoLink>
