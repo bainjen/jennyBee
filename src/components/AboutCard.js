@@ -9,6 +9,7 @@ const ColorDiv = styled.div`
   padding-right: 20px;
   border-radius: 15px;
   margin-bottom: 20px;
+  margin-top: 30px;
 
   &.about {
     margin-bottom: 3vh;

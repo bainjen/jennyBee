@@ -108,7 +108,8 @@ const cardInfo = [
   {
     className: "one",
     title: "Languages & Frameworks",
-    description: " JavaScript | HTML | CSS | Node.js | Ruby on Rails | PSQL",
+    description:
+      " JavaScript | React | HTML | CSS | Node.js | Ruby on Rails | PSQL | GraphQL ",
   },
   {
     className: "two",
@@ -119,7 +120,7 @@ const cardInfo = [
     className: "three",
     title: "Guilty Programming Pleasure",
     description:
-      " Putzing around in React-Spring and adding animations to anything and everything.",
+      "Putzing around in React-Spring and adding animations to anything and everything.",
   },
 ]
 
@@ -150,19 +151,21 @@ const About = props => {
             <br></br>Before switching careers, I worked as an executive
             assistant and an ESL teacher. These experiences provided an
             excellent opportunity to sharpen my communication and organizational
-            skills whilst learning a lot about how humans interact with
-            technology.
+            skills whilst gathering ample information about how humans interact
+            with technology.
             <br></br>
             --------
             <br></br>
-            My love for helping people is what propels me to create apps! It's
-            exciting to make something that people want to use, or at the very
-            least, something they don't dread using 😉.
+            My love for helping people is what propels me to create useful apps!
+            It's exciting to make something that people want to use, or at the
+            very least, something they don't dread using 😉.
             <br></br>
             --------
-            <br></br>Currently, I reside in Calgary, AB
+            <br></br>Currently, I reside in Calgary, AB where I spend too much
+            money on croissants and baguettes at The Black Sheep.
           </StyledP>
         </AboutDiv>
+        <StyledH1>Technology</StyledH1>
         <Colors>{cards}</Colors>
       </ContainerDiv>
       <StyledH1 className="tidbits">Tidbits</StyledH1>

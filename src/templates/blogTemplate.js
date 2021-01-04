@@ -50,7 +50,16 @@ const StyledUL = styled.ul`
   list-style-type: square;
   font-weight: 300;
   @media ${device.mobileL} {
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
+    letter-spacing: 1px;
+  }
+`
+const StyledOL = styled.ol`
+  color: ${props => props.theme.green};
+  margin: 12px 0 12px;
+  font-size: 1em;
+  font-weight: 300;
+  @media ${device.mobileL} {
     letter-spacing: 1px;
   }
 `
@@ -79,8 +88,10 @@ const StyledBlogImage = styled.img`
   margin: 24px 0 24px;
   max-width: 80vw;
   border-radius: 5px;
+  object-fit: cover;
+  overflow: hidden;
   @media ${device.tablet} {
-    max-height: 50vh;
+    /* max-height: 50vh; */
   }
 `
 const StyledLink = styled.a`
@@ -111,6 +122,7 @@ const BackButton = styled.button`
   width: 6em;
   border-radius: 12px;
   border: solid ${props => props.theme.green};
+  margin-top: 2em;
 
   &a {
     text-decoration: none;
@@ -159,6 +171,7 @@ export default function Template({ data }) {
             h3: StyledH3,
             h6: StyledH6,
             ul: StyledUL,
+            ol: StyledOL,
             a: StyledLink,
           }}
         >

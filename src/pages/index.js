@@ -82,7 +82,7 @@ const StyledH1 = styled.h1`
 const StyledP = styled.p`
   color: white;
   font-size: 16px;
-  margin-top: 1em;
+  /* margin-top: 1em; */
   font-weight: 500;
   padding: 10px;
   @media ${device.laptop} {
@@ -90,6 +90,20 @@ const StyledP = styled.p`
   }
   @media ${device.desktop} {
     font-size: 40px;
+  }
+`
+
+const StyledH4 = styled.h4`
+  color: white;
+  font-size: 24px;
+  margin-top: 1em;
+  font-weight: 700;
+  padding: 10px;
+  @media ${device.laptop} {
+    font-size: 32px;
+  }
+  @media ${device.desktop} {
+    font-size: 48px;
   }
 `
 
@@ -110,9 +124,11 @@ const Home = props => {
           <StyledH1>Hello, friend!</StyledH1>
           <StyledH1>I'm Jennifer,</StyledH1>
           <StyledH1>a full stack web developer.</StyledH1>
+          <StyledH4>
+            I like people and solving the problems that bug them.
+          </StyledH4>
           <StyledP>
-            Thank you for stopping by. <br></br>I'm thrilled you've made it! --
-            enjoy
+            I'm thrilled you've stopped by! -- enjoy
             <span role="img" aria-label="sunflower">
               🌻
             </span>
