@@ -118,7 +118,7 @@ const Home = props => {
   const path = props.path
 
   return (
-    <Layout isMainPage={true}>
+    <Layout isMainPage={true} pos={"fixed"}>
       <WrapperDiv>
         <ImageDiv fluid={backgroundStack}>
           <StyledH1>Hello, friend!</StyledH1>

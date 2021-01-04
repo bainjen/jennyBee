@@ -103,7 +103,24 @@ const StyledP = styled.p`
     }
   }
 `
+const StyledLink = styled.a`
+  color: ${props => props.theme.sunflower};
 
+  &:visited {
+    text-decoration: none;
+    color: ${props => props.theme.salmon};
+  }
+  &:link {
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: none;
+    color: ${props => props.theme.lightSalmon};
+  }
+`
 const cardInfo = [
   {
     className: "one",
@@ -156,7 +173,7 @@ const About = props => {
             <br></br>
             --------
             <br></br>
-            My love for helping people is what propels me to create useful apps!
+            My love for helping people is what drives me to create useful apps!
             It's exciting to make something that people want to use, or at the
             very least, something they don't dread using 😉.
             <br></br>
@@ -191,9 +208,15 @@ const About = props => {
             👾
           </span>{" "}
           <p>
-            I live with my partner, James, and two little monsters, Pippa &
-            Prairie. We enjoy reality TV, getting scared while camping, and
-            browsing bookstores for treasures.
+            I live with my partner, James, and two little monsters, Pippa &{" "}
+            <StyledLink
+              href="https://prairie-resume.netlify.app/"
+              target="_blank"
+            >
+              Prairie
+            </StyledLink>
+            . We enjoy reality TV, getting scared while camping, and browsing
+            bookstores for treasures.
           </p>
         </li>
         <li>

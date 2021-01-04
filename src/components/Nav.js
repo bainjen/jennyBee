@@ -12,7 +12,7 @@ const StyledNav = styled.nav`
   align-items: center;
   justify-content: space-between;
   font-size: 15px;
-  position: sticky;
+  position: ${props => props.pos || "relative"};
   z-index: 1000;
   width: 100vw;
 
@@ -84,7 +84,7 @@ const StyledLink = styled(Link)`
 `
 
 const Nav = props => {
-  const { isMainPage } = props
+  const { isMainPage, pos } = props
 
   const navLabels = [
     {
@@ -120,7 +120,7 @@ const Nav = props => {
   })
 
   return (
-    <StyledNav className="nav">
+    <StyledNav pos={pos} lassName="nav">
       <StyledH1>JennyBain</StyledH1>
       <StyledUl className="nav-list">{links}</StyledUl>
     </StyledNav>

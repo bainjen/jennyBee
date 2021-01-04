@@ -37,7 +37,7 @@ const StyledMain = styled.main`
     padding-top: 50px;
   }
 `
-const Layout = ({ isMainPage, children }) => {
+const Layout = ({ isMainPage, children, pos }) => {
   return (
     <ThemeProvider theme={lightTheme}>
       <GlobalStyle />
@@ -54,7 +54,7 @@ const Layout = ({ isMainPage, children }) => {
         />
       </Helmet>
       <div className="layout">
-        <Nav isMainPage={isMainPage} />
+        <Nav isMainPage={isMainPage} pos={pos} />
         <MDXProvider components={components}>
           <StyledMain className="main">{children}</StyledMain>
         </MDXProvider>
