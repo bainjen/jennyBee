@@ -208,7 +208,11 @@ const About = props => {
             👾
           </span>{" "}
           <p>
-            I live with my partner, James, and two little monsters, Pippa &{" "}
+            I live with my partner,{" "}
+            <StyledLink href="https://www.jamescbain.com/" target="_blank">
+              James
+            </StyledLink>
+            , and two little monsters, Pippa &{" "}
             <StyledLink
               href="https://prairie-resume.netlify.app/"
               target="_blank"
